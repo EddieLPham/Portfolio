@@ -1,0 +1,32 @@
+div.PContainer {
+	display: block;
+	h1.PTitle {
+		display: flex;
+		justify-content: center;
+	}
+	div.PBox1 {
+		display: flex;
+		flex-direction: row;
+		column-gap: 3%;
+		padding: 1%;
+		width: auto;
+		height: 50%;
+	}
+	div.PBox2 {
+		display: flex;
+		flex-direction: row;
+		column-gap: 3%;
+		padding: 1%;
+		width: auto;
+		height: 50%;
+		
+	}
+	.ProjectBox1{
+		width:35%;
+	}
+	.ProjectBox2{
+		width: 65%;
+	}
+
+	
+}

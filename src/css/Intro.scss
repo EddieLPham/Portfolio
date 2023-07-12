@@ -1,0 +1,44 @@
+div.IContainer {
+	padding: 1%;
+	width: auto;
+	height: 30%;
+	h1.nameTag {
+		text-align: center;
+		margin: 0;
+	}
+	div.titleBox {
+		height: 14%;
+		padding: 1%;
+		text-align: center;
+		h1.tag {
+			display: inline-block;
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+			animation: blink 4s infinite;
+
+			@keyframes blink {
+				0% {
+					opacity: 0;
+				}
+				50% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	div.descBox {
+		display: flex;
+		justify-content: center;
+		padding: 1%;
+		p.desc {
+			width: 75%;
+			height: 80%;
+			text-align: center;
+		}
+	}
+}
