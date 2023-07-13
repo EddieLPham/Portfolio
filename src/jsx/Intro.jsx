@@ -2,40 +2,47 @@ import React, { useEffect, useState } from "react";
 import "../css/Intro.scss";
 
 const Intro = () => {
-	const [titleIndex, setTitleIndex] = useState(0);
 	const titles = [
-		"Full-Stack Developer",
+		"Designer",
+		"Software Developer",
 		"Back-end Developer",
-		"Game Developer",
+		"Web Developer",
 	];
+	const [titleIndex, setTitleIndex] = useState("Developer");
+	const [currentTitle, setCurrentTitle] = useState(0);
+
 	useEffect(() => {
-		const interval = setInterval(() => {
-			setTitleIndex(titleIndex => (titleIndex+1) % titles.length);
-		}, 4000);
-		return () => (interval);
-	}, []);
+		function updateTitle() {
+			setTitleIndex(titles[currentTitle]);
+			if (currentTitle < 3) {
+				setCurrentTitle(currentTitle + 1);
+			} else {
+				setCurrentTitle(0);
+			}
+		}
+		setTimeout(updateTitle, 4000);
+	}, [currentTitle]);
 
 	return (
 		<div className="IContainer">
 			<h1 className="nameTag"> Lap Pham</h1>
-
 			<div className="titleBox">
-				<h1 className="tag"> {titles[titleIndex]}</h1>
+				<h1 className="tag"> {titleIndex}</h1>
 			</div>
+
 			<div className="descBox">
-				<p className="desc">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit
-					amet consectetur adipiscing elit. Dignissim cras tincidunt lobortis
-					feugiat vivamus. Tincidunt arcu non sodales neque. Commodo elit at
-					imperdiet dui accumsan sit. Cursus sit amet dictum sit amet justo
-					donec.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit
-					amet consectetur adipiscing elit. Dignissim cras tincidunt lobortis
-					feugiat vivamus. Tincidunt arcu non sodales neque. Commodo elit at
-					imperdiet dui accumsan sit. Cursus sit amet dictum sit amet justo
-					donec.
-				</p>
+				<h4 className="descGreet">Hello there! I'm Lap Pham,</h4>
+				<p className="desc">I'm a Developer, proficient in software and website.</p>
+				<div className="webLink">
+					<a href="" className="Button">Skills</a>
+					<a href="" className="Button">Projects</a>
+					<a href="" className="Button">About</a>
+					<a href="" className="Button">Contact</a>
+				</div>
+			</div>
+
+			<div className="image">
+					"Insert Picture of Me"
 			</div>
 		</div> //Container
 	);

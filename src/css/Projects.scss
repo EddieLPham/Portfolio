@@ -7,26 +7,74 @@ div.PContainer {
 	div.PBox1 {
 		display: flex;
 		flex-direction: row;
-		column-gap: 3%;
-		padding: 1%;
+		column-gap: 1%;
+		padding: 2%;
 		width: auto;
 		height: 50%;
+		align-items: center;
 	}
 	div.PBox2 {
 		display: flex;
 		flex-direction: row;
-		column-gap: 3%;
-		padding: 1%;
+		column-gap: 1%;
+		padding: 2%;
 		width: auto;
 		height: 50%;
-		
+		align-items: center;
 	}
-	.ProjectBox1{
-		width:35%;
+	div.ProjectBox1 {
+		outline: 2px solid;
+		border-radius: 10px;
+		width: 40%;
 	}
-	.ProjectBox2{
-		width: 65%;
+	div.ProjectBox2 {
+		outline: 2px solid;
+		border-radius: 10px;
+		width: 60%;
+	}
+	h3 {
+		padding: 0px 15px;
+		margin: 5px 0px;
+	}
+	div.boxDescription1 {
+		width: 100%;
+		display: inline-block;
+
+		.p1 {
+			transform: translateX(-100%);
+			height: 75px;
+			padding: 0px 15px;
+			position: relative;
+			display: inline-block;
+			pointer-events: none;
+			transition: 0.5s;
+			overflow: hidden;
+			opacity: 0;
+		}
+		&:hover .p1 {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 
-	
+	div.boxDescription2 {
+		width: 100%;
+		display: inline-block;
+
+		.p2 {
+			transform: translateX(100%);
+			height: 75px;
+			padding: 0px 15px;
+			position: relative;
+			display: inline-block;
+			pointer-events: none;
+			transition: 0.5s;
+			overflow: hidden;
+			opacity: 0;
+		}
+		&:hover .p2 {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
 }

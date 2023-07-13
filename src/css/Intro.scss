@@ -1,19 +1,21 @@
 div.IContainer {
 	padding: 1%;
-	width: auto;
-	height: 30%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
 	h1.nameTag {
 		text-align: center;
 		margin: 0;
+		width: 100%;
 	}
 	div.titleBox {
-		height: 14%;
-		padding: 1%;
+		width: 100%;
 		text-align: center;
 		h1.tag {
 			display: inline-block;
 			text-align: center;
-			font-size: 30px;
+			font-size: 40px;
 			font-weight: bold;
 			animation: blink 4s infinite;
 
@@ -32,13 +34,58 @@ div.IContainer {
 	}
 
 	div.descBox {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		column-gap: 3%;
+		padding: 1%;
+		width: 60%;
+		h4.descGreet {
+			font-size: 40px;
+			width: 100%;
+			margin: 0;
+			padding-left: 5px;
+		}
+		p.desc {
+			font-size: 25px;
+			width: 100%;
+			padding: 5px 5px;
+			margin: 10px 10px;
+			text-align: left;
+		}
+		div.webLink {
+			height: 20px;
+			width: 100%;
+			padding: 10px 0px;
+			a {
+				box-shadow: inset 0 0 0 0 #f4c3c2;
+				color: #f4c3c2;
+				margin-right: 10px;
+				padding-right: 2px;
+				transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+				&:hover {
+					color: #fff;
+					box-shadow: inset 200px 0 0 0 #f4c3c2;
+				}
+			}
+
+			a {
+				color: #f28482;
+				font-family: "Poppins", sans-serif;
+				font-size: 27px;
+				font-weight: 700;
+				line-height: 1.5;
+				text-decoration: none;
+			}
+		}
+	}
+	div.image {
+		width: 35%;
+		height: 700px;
+		padding: 10px;
 		display: flex;
 		justify-content: center;
-		padding: 1%;
-		p.desc {
-			width: 75%;
-			height: 80%;
-			text-align: center;
-		}
+		background-color: salmon;
 	}
 }
