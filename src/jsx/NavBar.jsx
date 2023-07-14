@@ -6,7 +6,7 @@ const NavBar = () => {
 		<nav className="NavContainer">
 			<ul className="Lists">
 				<li className="Items">
-					<a href="https://suggestedname.github.io/WebsitePortfolio/extras/LapPham-Resume.pdf" target="_blank">
+					<a href="https://suggestedname.github.io/WebsitePortfolio/extras/LapPham-Resume.pdf.html" target="_blank">
 						<img
 							alt="resume"
 							src="https://img.icons8.com/ios/150/000000/resume.png"
