@@ -25,14 +25,13 @@ const Intro = () => {
 
 	return (
 		<div className="IContainer">
-			<h1 className="nameTag"> Lap Pham</h1>
 			<div className="titleBox">
 				<h1 className="tag"> {titleIndex}</h1>
 			</div>
 
 			<div className="descBox">
-				<h4 className="descGreet">Hello there! I'm Lap Pham,</h4>
-				<p className="desc">I'm a Developer, proficient in software and website.</p>
+				<h4 className="descGreet">Hello there 👋! I'm Lap Pham,</h4>
+				<p className="desc">I'm a Software Developer.</p>
 				<div className="webLink">
 					<a href="" className="Button">Skills</a>
 					<a href="" className="Button">Projects</a>
