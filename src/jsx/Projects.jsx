@@ -2,12 +2,16 @@ import React from "react";
 import "../css/Projects.scss";
 const Projects = () => {
 	return (
-		<div className="PContainer">
+		
+		<div id="project" className="PContainer">
 			<h1 className="PTitle">Projects</h1>
 			<div className="PBox1">
 				<div className="ProjectBox1">
 					<h3 className="boxTitle">
-						<a href="https://github.com/SuggestedName/Movie-Screening-Forum" target="_blank">
+						<a
+							href="https://github.com/SuggestedName/Movie-Screening-Forum"
+							target="_blank"
+						>
 							Movie Screening Forum
 						</a>
 					</h3>
@@ -23,7 +27,10 @@ const Projects = () => {
 				</div>
 				<div className="ProjectBox2">
 					<h3 className="boxTitle">
-						<a href="https://github.com/SuggestedName/CNN-Dolphins/" target="_blank">
+						<a
+							href="https://github.com/SuggestedName/CNN-Dolphins/"
+							target="_blank"
+						>
 							Dolphin Identifier MachineLearning Project
 						</a>
 					</h3>
@@ -42,7 +49,10 @@ const Projects = () => {
 			<div className="PBox2">
 				<div className="ProjectBox2">
 					<h3 className="boxTitle">
-						<a href="https://github.com/SuggestedName/CSCI6050-B1/" target="_blank">
+						<a
+							href="https://github.com/SuggestedName/CSCI6050-B1/"
+							target="_blank"
+						>
 							Movie Theater Booking
 						</a>
 					</h3>
@@ -73,7 +83,7 @@ const Projects = () => {
 							sit amet consectetur adipiscing elit. Dignissim cras tincidunt
 							<br />
 							<br />
-							<h4>dsadsadsa</h4>
+							<h4>Tech Stack: To be determine</h4>
 						</p>
 					</div>
 				</div>

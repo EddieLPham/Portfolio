@@ -4,12 +4,14 @@ import Contact from './jsx/Contact';
 import Intro from './jsx/Intro';
 import NavBar from './jsx/NavBar';
 import Projects from './jsx/Projects';
+import About from './jsx/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <NavBar/>
     <Intro/>
+    <About/>
     <Projects/>
     <Contact/>
   </React.StrictMode>

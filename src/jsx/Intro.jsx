@@ -24,7 +24,7 @@ const Intro = () => {
 	}, [currentTitle]);
 
 	return (
-		<div className="IContainer">
+		<div id = "intro" className="IContainer">
 			<div className="titleBox">
 				<h1 className="tag"> {titleIndex}</h1>
 			</div>
@@ -33,10 +33,10 @@ const Intro = () => {
 				<h4 className="descGreet">Hello there 👋! I'm Lap Pham,</h4>
 				<p className="desc">I'm a Software Developer.</p>
 				<div className="webLink">
-					<a href="" className="Button">Skills</a>
-					<a href="" className="Button">Projects</a>
+					<a href="#skill" className="Button">Skills</a>
+					<a href="#project" className="Button">Projects</a>
 					<a href="" className="Button">About</a>
-					<a href="" className="Button">Contact</a>
+					<a href="#contact" className="Button">Contact</a>
 				</div>
 			</div>
 

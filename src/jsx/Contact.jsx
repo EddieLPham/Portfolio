@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import "boxicons";
 import "../css/Contact.scss";
 import emailjs from "@emailjs/browser";
 
@@ -24,18 +25,22 @@ const Contact = () => {
 	};
 
 	return (
-		<div className="CContainer">
+		<div id="contact" className="CContainer">
 			<div className="contactMessage">
 				<h1 className="contactTitle">
 					🔌 Let's connect! <br />
 					Tell me about you and your projects.
 				</h1>
 				<h3>Let create something together!</h3>
-			</div>
+			</div>{" "}
+			{/*message*/}
 			<div className="contactEmail">
 				<div className="contactForm">
+					<div className="emailHeader">
+						<h2>Send me a message! </h2>
+						<box-icon name="mail-send" size="lg"></box-icon>
+					</div>
 					<form className="emailForm" ref={form} onSubmit={sendEmail}>
-						<h2>Send me a message! 📬</h2>
 						<input
 							class="form-group section"
 							type="text"
@@ -52,14 +57,32 @@ const Contact = () => {
 							class="form-group message"
 							name="message"
 							row="4"
-							placeholder="Anything you want to say to me... "
+							placeholder="Your message here!... "
 						/>
 						<button class="Button" type="submit" value="Send">
 							Send message
 						</button>
 					</form>
 				</div>
+				{/* email form*/}
 			</div>
+			<div className="contactBar">
+				<div className="linkedIn">
+					<a href="https://www.linkedin.com/in/lpham1357/" target="_blank">
+						<box-icon type="logo" name="linkedin" size="lg"></box-icon>
+					</a>
+				</div>
+				<div className="gitHub">
+					<a
+						href="https//suggestedname.github.io/WebsitePortfolio/extras/LapPham-Resume.pdf.html"
+						target="_blank"
+					>
+						<box-icon name="github" type="logo" size="lg"></box-icon>
+					</a>
+				</div>
+			
+			</div>
+			{/* contact bar*/}
 		</div> //Container
 	);
 };

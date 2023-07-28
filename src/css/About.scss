@@ -1,0 +1,46 @@
+div.skillBox {
+	height: 700px;
+	text-align: center;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	div.aboutMe {
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 10px 25px;
+		p {
+			font-size: 15px;
+		}
+	}
+	div.skill {
+		width: 45%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		div.skillWheel {
+			background-color: silver;
+			.box {
+				height: 100px;
+				border: 1px solid black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+			.box.close > h3 {
+				display: none;
+			}
+
+			div.Front-end {
+				visibility: hide;
+			}
+			div.Tools {
+			}
+			div.Back-end {
+				visibility: hide;
+			}
+		}
+	}
+}
