@@ -21,25 +21,23 @@ div.skillBox {
 		justify-content: center;
 		div.skillWheel {
 			background-color: silver;
-			.box {
-				height: 100px;
-				border: 1px solid black;
+			height: 500px;
+			display: flex;
+			div.toggleSkills {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 10px;
+				button.skillBtn{
+					font-size: 15px;
+				}
+			}
+			div.skillDisplay {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				cursor: pointer;
-			}
-			.box.close > h3 {
-				display: none;
-			}
-
-			div.Front-end {
-				visibility: hide;
-			}
-			div.Tools {
-			}
-			div.Back-end {
-				visibility: hide;
+				padding: 10px 20px;
+				width: 100%;
 			}
 		}
 	}

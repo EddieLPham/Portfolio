@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "../css/About.scss";
 const About = () => {
+	const [visibleDiv, setVisibleDiv] = useState(null);
+
+	const toggleDiv = (divName) => {
+		setVisibleDiv((prevDiv) => (prevDiv === divName ? null : divName));
+	};
+
 	return (
 		<div id="about" className="skillBox">
 			<div className="aboutMe">
@@ -22,14 +28,36 @@ const About = () => {
 			<div className="skill">
 				<h2>Skills</h2>
 				<div className="skillWheel">
-					<div id="tools" className="skillTitle">
-						<h3>Front-end</h3>
+					<div className="toggleSkills">
+						<button className="skillBtn" onClick={() => toggleDiv("div1")}>Front-end</button>
+						<button className="skillBtn" onClick={() => toggleDiv("div2")}>Tools</button>
+						<button className="skillBtn" onClick={() => toggleDiv("div3")}>Back-end</button>
 					</div>
-					<div id="tools" className="skillTitle">
-						<h3>Tools</h3>
-					</div>
-					<div id="back" className="skillTitle">
-						<h3>Back-end</h3>
+					<div className="skillDisplay">
+						{visibleDiv === "div1" && (
+							<div className="skillNames">
+								<h2>Front-end</h2>
+								<h4>Random</h4>
+								<h4>Random</h4>
+								<h4>Random</h4>
+							</div>
+						)}
+						{visibleDiv === "div2" && (
+							<div className="skillNames">
+								<h2>Tools</h2>
+								<h4>Random</h4>
+								<h4>Random</h4>
+								<h4>Random</h4>
+							</div>
+						)}
+						{visibleDiv === "div3" && (
+							<div className="skillNames">
+								<h2>Back-end</h2>
+								<h4>Random</h4>
+								<h4>Random</h4>
+								<h4>Random</h4>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
