@@ -26,36 +26,87 @@ const About = () => {
 				</p>
 			</div>
 			<div className="skill">
-				<h2>Skills</h2>
 				<div className="skillWheel">
 					<div className="toggleSkills">
-						<button className="skillBtn" onClick={() => toggleDiv("div1")}>Front-end</button>
-						<button className="skillBtn" onClick={() => toggleDiv("div2")}>Tools</button>
-						<button className="skillBtn" onClick={() => toggleDiv("div3")}>Back-end</button>
+						<button className="skillBtn" onClick={() => toggleDiv("div1")}>
+							<span class="text">Front-end</span>
+						</button>
+						<button className="skillBtn" onClick={() => toggleDiv("div2")}>
+							<span class="text">Tools</span>
+						</button>
+						<button className="skillBtn" onClick={() => toggleDiv("div3")}>
+							<span class="text">Back-end</span>
+						</button>
 					</div>
 					<div className="skillDisplay">
 						{visibleDiv === "div1" && (
 							<div className="skillNames">
-								<h2>Front-end</h2>
-								<h4>Random</h4>
-								<h4>Random</h4>
-								<h4>Random</h4>
+								<h2>Front-End</h2>
+								<img
+									width="90"
+									height="90"
+									src="https://img.icons8.com/ios-filled/100/sass-avatar.png"
+									alt="sass-avatar"
+								/>
+								<img
+									width="90"
+									height="90"
+									src="https://img.icons8.com/ios-glyphs/120/react.png"
+									alt="react"
+								/>
+
+								<img
+									width="90"
+									height="90"
+									src="https://img.icons8.com/ios/100/html.png"
+									alt="html"
+								/>
 							</div>
 						)}
 						{visibleDiv === "div2" && (
 							<div className="skillNames">
 								<h2>Tools</h2>
-								<h4>Random</h4>
-								<h4>Random</h4>
-								<h4>Random</h4>
+								<img
+									width="90"
+									height="90"
+									src="https://img.icons8.com/ios/100/java-coffee-cup-logo--v1.png"
+									alt="java-coffee-cup-logo--v1"
+								/>
+								<img
+									width="90"
+									height="90"
+									src="https://img.icons8.com/ios-filled/100/c-sharp-logo.png"
+									alt="c-sharp-logo"
+								/>
+								<img
+									width="72"
+									height="72"
+									src="https://img.icons8.com/ios-filled/100/visual-studio.png"
+									alt="visual-studio"
+								/>
+								<img
+									width="90"
+									height="90"
+									src="https://img.icons8.com/ios-glyphs/90/sql.png"
+									alt="sql"
+								/>
 							</div>
 						)}
 						{visibleDiv === "div3" && (
 							<div className="skillNames">
 								<h2>Back-end</h2>
-								<h4>Random</h4>
-								<h4>Random</h4>
-								<h4>Random</h4>
+								<img
+									width="90"
+									height="90"
+									src="https://img.icons8.com/windows/96/nodejs.png"
+									alt="nodejs"
+								/>
+								<img
+									width="90"
+									height="90"
+									src="https://img.icons8.com/color/96/000000/net-framework.png"
+									alt="net-framework"
+								/>
 							</div>
 						)}
 					</div>
