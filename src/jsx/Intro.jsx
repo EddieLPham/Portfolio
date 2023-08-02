@@ -35,7 +35,7 @@ const Intro = () => {
 				<div className="webLink">
 					<a href="#skill" className="Button">Skills</a>
 					<a href="#project" className="Button">Projects</a>
-					<a href="" className="Button">About</a>
+					<a href="#about" className="Button">About</a>
 					<a href="#contact" className="Button">Contact</a>
 				</div>
 			</div>

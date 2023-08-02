@@ -2,6 +2,7 @@ div.CContainer {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	height: 60vh;
 	div.contactMessage {
 		width: 60%;
 		display: flex;
@@ -78,10 +79,5 @@ div.CContainer {
 				transform: translateY(-0.15em);
 			}
 		}
-	}
-	div.contactBar {
-		width: 100%;
-		display: flex;
-		justify-content: center;
 	}
 }

@@ -66,23 +66,6 @@ const Contact = () => {
 				</div>
 				{/* email form*/}
 			</div>
-			<div className="contactBar">
-				<div className="linkedIn">
-					<a href="https://www.linkedin.com/in/lpham1357/" target="_blank">
-						<box-icon type="logo" name="linkedin" size="lg"></box-icon>
-					</a>
-				</div>
-				<div className="gitHub">
-					<a
-						href="https//suggestedname.github.io/WebsitePortfolio/extras/LapPham-Resume.pdf.html"
-						target="_blank"
-					>
-						<box-icon name="github" type="logo" size="lg"></box-icon>
-					</a>
-				</div>
-			
-			</div>
-			{/* contact bar*/}
 		</div> //Container
 	);
 };

@@ -12,18 +12,16 @@ const About = () => {
 			<div className="aboutMe">
 				<h1 className="skillTitle">About Me</h1>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc
-					aliquet bibendum enim facilisis gravida neque convallis. Tortor at
-					auctor urna nunc id cursus. Egestas erat imperdiet sed euismod nisi.
-					Mollis nunc sed id semper risus. Tempus egestas sed sed risus pretium.
-					Habitasse platea dictumst quisque sagittis purus sit. Risus sed
-					vulputate odio ut enim blandit volutpat maecenas volutpat. Auctor
-					augue mauris augue neque gravida in fermentum et. Scelerisque viverra
-					mauris in aliquam sem fringilla ut. Cursus in hac habitasse platea
-					dictumst. Tristique senectus et netus et malesuada fames ac turpis
-					egestas.
+					Hi there! 👋 I'm Lap Van Pham, a Computer Science
+					graduated from The University of Georgia.
+					I'm eager to explore new opportunities in the tech industry.
 				</p>
+				<p>
+					I'm eager to connect with tech enthusiasts, industry professionals,
+					and potential collaborators. Feel free to reach out and let's discuss exciting opportunities and
+					tech innovations!
+				</p>
+				<p>Down below are past projects that I've worked on, check them out on GitHub simply click the title!</p>
 			</div>
 			<div className="skill">
 				<div className="skillWheel">
@@ -39,27 +37,35 @@ const About = () => {
 						</button>
 					</div>
 					<div className="skillDisplay">
+						{!visibleDiv && (
+							<div className="my-div">
+								<h3>
+									"One can have no smaller or greater mastery than mastery of
+									oneself." - Leonardo da Vinci
+								</h3>
+							</div>
+						)}
 						{visibleDiv === "div1" && (
 							<div className="skillNames">
 								<h2>Front-End</h2>
 								<img
 									width="90"
 									height="90"
-									src="https://img.icons8.com/ios-filled/100/sass-avatar.png"
+									src="https://img.icons8.com/color/96/sass-avatar.png"
 									alt="sass-avatar"
 								/>
 								<img
 									width="90"
 									height="90"
-									src="https://img.icons8.com/ios-glyphs/120/react.png"
+									src="https://img.icons8.com/officel/80/react.png"
 									alt="react"
 								/>
 
 								<img
 									width="90"
 									height="90"
-									src="https://img.icons8.com/ios/100/html.png"
-									alt="html"
+									src="https://img.icons8.com/color/96/html-5--v1.png"
+									alt="html-5--v1"
 								/>
 							</div>
 						)}
@@ -69,26 +75,26 @@ const About = () => {
 								<img
 									width="90"
 									height="90"
-									src="https://img.icons8.com/ios/100/java-coffee-cup-logo--v1.png"
+									src="https://img.icons8.com/color/96/java-coffee-cup-logo--v1.png"
 									alt="java-coffee-cup-logo--v1"
 								/>
 								<img
 									width="90"
 									height="90"
-									src="https://img.icons8.com/ios-filled/100/c-sharp-logo.png"
+									src="https://img.icons8.com/color/96/c-sharp-logo.png"
 									alt="c-sharp-logo"
 								/>
 								<img
 									width="72"
 									height="72"
-									src="https://img.icons8.com/ios-filled/100/visual-studio.png"
+									src="https://img.icons8.com/fluency/96/visual-studio.png"
 									alt="visual-studio"
 								/>
 								<img
 									width="90"
 									height="90"
-									src="https://img.icons8.com/ios-glyphs/90/sql.png"
-									alt="sql"
+									src="https://img.icons8.com/color/96/mysql-logo.png"
+									alt="mysql-logo"
 								/>
 							</div>
 						)}
@@ -98,7 +104,7 @@ const About = () => {
 								<img
 									width="90"
 									height="90"
-									src="https://img.icons8.com/windows/96/nodejs.png"
+									src="https://img.icons8.com/color/96/nodejs.png"
 									alt="nodejs"
 								/>
 								<img
@@ -110,6 +116,8 @@ const About = () => {
 							</div>
 						)}
 					</div>
+					<div className="example2"></div>
+					<div className="example"></div>
 				</div>
 			</div>
 		</div>

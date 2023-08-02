@@ -2,6 +2,7 @@ div.PContainer {
 	display: block;
 	padding: 5px;
 	margin: 5px;
+	height: 80vh;
 	h1.PTitle {
 		display: flex;
 		justify-content: center;
@@ -59,7 +60,7 @@ div.PContainer {
 	div.boxDescription1 {
 		display: flex;
 		align-items: center;
-		background-color: #d1603d;
+		background-color: #fa8072;
 		border-radius: 5px;
 		height: 250px;
 		.p1 {
@@ -73,7 +74,7 @@ div.PContainer {
 			transition: 0.5s;
 			overflow: hidden;
 			opacity: 0;
-			color: white;
+			color: #000000;
 			width: 90%;
 		}
 		&:hover .p1 {
@@ -85,7 +86,7 @@ div.PContainer {
 	div.boxDescription2 {
 		display: flex;
 		align-items: center;
-		background-color: #d1603d;
+		background-color: #fa8072;
 		border-radius: 5px;
 		height: 250px;
 		.p2 {
@@ -99,7 +100,7 @@ div.PContainer {
 			transition: 0.5s;
 			overflow: hidden;
 			opacity: 0;
-			color: white;
+			color: #000000;
 			width: 90%;
 		}
 		&:hover .p2 {

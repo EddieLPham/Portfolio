@@ -2,6 +2,9 @@ div.skillBox {
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	margin: 10px 0;
+	padding: 10px 0;
+	height: 80vh;
 	div.aboutMe {
 		font-size: 25px;
 		width: 35%;
@@ -9,34 +12,37 @@ div.skillBox {
 		flex-direction: column;
 		justify-content: center;
 		padding: 10px 25px;
-		h1.skillTitle{
+		h1.skillTitle {
 			margin: 10px 20px;
 		}
 		p {
-			font-size: 15px;
-			font-weight: 700;
+			font-size: 20px;
+			text-align: left;
+			padding: 0 5px;
+			margin: 10px;
 		}
 	}
 	div.skill {
 		width: 55%;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		align-items: center;
 		div.skillWheel {
-			padding: 20px;
+			position: relative;
+			padding: 5px;
 			height: 500px;
 			display: flex;
-			//background-color: #fa8072;
+			flex-wrap: wrap;
+			justify-content: center;
 			div.toggleSkills {
+				z-index: 3;
 				display: flex;
-				flex-direction: column;
-				justify-content: center;
+				align-items: center;
 				padding: 10px;
-				width: 60%;
+				height: 15%;
 				button.skillBtn {
 					align-items: center;
 					background-image: linear-gradient(
-						144deg,
+						13deg,
 						#d1603d,
 						#fa8072 50%,
 						#92140c
@@ -47,15 +53,15 @@ div.skillBox {
 					box-sizing: border-box;
 					color: #ffffff;
 					display: flex;
-					font-size: 25px;
+					font-size: 20px;
 					justify-content: center;
-					padding: 10px 5px;
+					padding: 7px 7px;
 					text-decoration: none;
 					user-select: none;
 					touch-action: manipulation;
 					white-space: nowrap;
 					cursor: pointer;
-					margin: 5px 0;
+					margin: 0 5px;
 				}
 
 				.skillBtn:active,
@@ -83,10 +89,11 @@ div.skillBox {
 					}
 				}
 			}
+
 			div.skillDisplay {
+				z-index: 3;
 				display: flex;
 				justify-content: center;
-				align-items: center;
 				padding: 10px 20px;
 				width: 100%;
 				div.skillNames {
@@ -95,16 +102,36 @@ div.skillBox {
 					justify-content: center;
 					padding: 10px;
 					height: 40%;
-					
+
 					h2 {
 						width: 100%;
-						
+
 						font-size: 25px;
 					}
 					img {
 						padding: 5px 10px;
 					}
 				}
+			}
+			div.example2 {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				border-radius: 20px;
+				background-color:#e2dbdb;
+				z-index: 2;
+				opacity: 0.85;
+			}
+			div.example {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				border-radius: 20px;
+				background-color: #f34d4d;
+				transform: translateX(15px) rotate(2deg);
+				z-index: 0;
+				opacity: 1;
+				
 			}
 		}
 	}
