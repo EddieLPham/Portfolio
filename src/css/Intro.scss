@@ -3,8 +3,8 @@ div.IContainer {
 	margin: 10px 0;
 	display: flex;
 	flex-wrap: wrap;
-	height: 80vh;
-
+	height: fit-content;
+	justify-content: center;
 	div.titleBox {
 		width: 100%;
 		text-align: center;
@@ -43,7 +43,7 @@ div.IContainer {
 		column-gap: 3%;
 		width: 55%;
 		padding: 10px 30px 0 0;
-		font-size: 45px;
+		font-size: 40px;
 		h4.descGreet {
 			margin: 0;
 			padding-left: 5px;
@@ -68,7 +68,7 @@ div.IContainer {
 
 			a {
 				color: #ea9010;
-				font-size: 50px;
+				font-size: 45px;
 				font-weight: 700;
 				text-decoration: none;
 			}
@@ -83,12 +83,46 @@ div.IContainer {
 		background-color: #fa8072;
 		border-radius: 20px;
 	}
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
+	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+		&.IContainer {
+			.titleBox {
+				.tag {
+					font-size: 30px;
+				}
+			}
+			.descBox {
+				font-size: 20px;
+				width: 100%;
+				.webLink {
+					a {
+						font-size: 20px;
+					}
+				}
+			}
+			.image {
+				width: 80%;
+			}
+		}
+	}
+	@media only screen and (min-device-width: 480px) and (max-device-width: 1056px) {
+		&.IContainer {
+			.titleBox {
+				.tag {
+					font-size: 45px;
+				}
+			}
+			.descBox {
+				font-size: 30px;
+				width: 100%;
+				.webLink {
+					a {
+						font-size: 30px;
+					}
+				}
+			}
+			.image {
+				width: 80%;
+			}
+		}
+	}
 }

@@ -16,11 +16,13 @@ const About = () => {
 					graduated from The University of Georgia.
 					I'm eager to explore new opportunities in the tech industry.
 				</p>
+				<hr/>
 				<p>
 					I'm eager to connect with tech enthusiasts, industry professionals,
 					and potential collaborators. Feel free to reach out and let's discuss exciting opportunities and
 					tech innovations!
 				</p>
+				<hr/>
 				<p>Down below are past projects that I've worked on, check them out on GitHub simply click the title!</p>
 			</div>
 			<div className="skill">

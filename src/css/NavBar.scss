@@ -1,23 +1,22 @@
 nav.NavContainer {
-	height: 30px;
+	height: 20px;
 	padding: 1%;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 0;
 	z-index: 5;
 	ul.Lists {
-		align-items: center;
 		position: absolute;
-		left: 90%;
-		transform: translate(-50%, -40%);
 		display: flex;
+		right: 0;
+		margin: 0;
+		padding: 0;
 		li.Items {
 			list-style: none;
 			a {
 				position: relative;
 				display: block;
-				margin: 10px 1%;
-				padding: 5px 10px;
+				margin: 7px 1%;
+				padding: 5px 5px;
 				color: #262626;
 				transition: 0.5s;
 				z-index: 1;

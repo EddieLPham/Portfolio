@@ -65,22 +65,13 @@ div.PContainer {
 		height: 250px;
 		.p1 {
 			font-size: 20px;
-			transform: translateY(-10%);
 			padding: 10px 15px 5px 15px;
 			margin: 5px 0 5px 0;
 			border-radius: 20px;
-			position: relative;
-			pointer-events: none;
-			transition: 0.5s;
-			overflow: hidden;
-			opacity: 0;
 			color: #000000;
 			width: 90%;
 		}
-		&:hover .p1 {
-			opacity: 1;
-			transform: translateX(5%);
-		}
+		
 	}
 
 	div.boxDescription2 {
@@ -91,24 +82,12 @@ div.PContainer {
 		height: 250px;
 		.p2 {
 			font-size: 20px;
-			transform: translateY(15%);
 			padding: 10px 15px 5px 15px;
 			margin: 5px 0 5px 0;
 			border-radius: 20px;
 			position: relative;
-			pointer-events: none;
-			transition: 0.5s;
-			overflow: hidden;
-			opacity: 0;
 			color: #000000;
 			width: 90%;
-		}
-		&:hover .p2 {
-			opacity: 1;
-			transform: translateX(5%);
-			.boxDescription2 {
-				opacity: 0.5;
-			}
 		}
 	}
 }
