@@ -4,14 +4,15 @@ div.skillBox {
 	justify-content: center;
 	margin: 10px 0;
 	padding: 10px 0;
-	height: fit-content;
+	height: 70vh;
+	align-items: center;
+	justify-content: center;
 	div.aboutMe {
 		font-size: 25px;
 		width: 45%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		padding: 10px 25px;
+		padding: 20px 25px;
 		h1.skillTitle {
 			margin: 10px 20px;
 		}
@@ -26,6 +27,8 @@ div.skillBox {
 		width: 45%;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		padding: 20px 0;
 		div.skillWheel {
 			position: relative;
 			padding: 5px;
@@ -38,9 +41,7 @@ div.skillBox {
 				padding: 10px;
 				align-items: center;
 				justify-content: center;
-				
 				button.skillBtn {
-					align-items: center;
 					background-image: linear-gradient(
 						13deg,
 						#d1603d,
@@ -54,14 +55,13 @@ div.skillBox {
 					color: #ffffff;
 					display: flex;
 					justify-content: center;
-					padding: 7px 7px;
 					text-decoration: none;
 					user-select: none;
 					touch-action: manipulation;
 					white-space: nowrap;
 					cursor: pointer;
+					padding: 7px 7px;
 					margin: 5px;
-					padding: 10px;
 				}
 
 				.skillBtn:active,
@@ -77,7 +77,6 @@ div.skillBox {
 					height: 100%;
 					transition: 300ms;
 					font-size: 20px;
-					
 				}
 
 				.skillBtn:hover span {
@@ -90,21 +89,22 @@ div.skillBox {
 				display: flex;
 				justify-content: center;
 				padding: 10px 20px;
+				height: 150px;
 				width: 100%;
+				div.initialQuote {
+					h3 {
+						display: flex;
+						font-size: 20px;
+						align-items: center;
+					}
+				}
 				div.skillNames {
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: center;
 					padding: 10px;
-					height: 40%;
-
-					h2 {
-						width: 100%;
-
-						font-size: 25px;
-					}
 					img {
-						padding: 5px 10px;
+						padding: 10px 10px;
 					}
 				}
 			}
@@ -123,7 +123,7 @@ div.skillBox {
 				width: 100%;
 				border-radius: 20px;
 				background-color: #f34d4d;
-				transform: translateX(15px) rotate(2deg);
+				transform: translateX(5px) rotate(2deg);
 				z-index: 0;
 				opacity: 1;
 			}
@@ -132,16 +132,38 @@ div.skillBox {
 	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 		/* Styles */
 		&.skillBox {
-			.skillWheel {
-				flex-wrap: nowrap;
-				align-items: center;
-				.toggleSkills {
-					flex-direction: column;
-					justify-content: center;
-					align-items: normal;
-					.skillBtn {
-						font-size: 20px;
-						min-width: 10%;
+			height: 90vh;
+			flex-direction: column;
+			.aboutMe {
+				width: 100%;
+				.skillTitle {
+					font-size: 25px;
+				}
+			}
+			.skill {
+				width: 100%;
+				.skillWheel {
+					width: 100%;
+					padding: 10px 30px;
+					flex-wrap: nowrap;
+					align-items: center;
+					.toggleSkills {
+						flex-direction: column;
+						align-items: normal;
+						.skillBtn span {
+							font-size: 15px;
+							min-width: 45%;
+						}
+					}
+					.skillDisplay {
+						align-items: center;
+						.initialQuote h3 {
+							font-size: 12px;
+						}
+						.skillNames img {
+							width: 50px;
+							height: 50px;
+						}
 					}
 				}
 			}
@@ -150,12 +172,37 @@ div.skillBox {
 	@media only screen and (min-device-width: 480px) and (max-device-width: 1056px) {
 		/* Styles */
 		&.skillBox {
-			.skillWheel {
-				height: 55%;
-				.toggleSkills {
-					.skillBtn {
-						font-size: 20px;
-						min-width: 45%;
+			flex-direction: column;
+			.aboutMe {
+				width: 100%;
+				.skillTitle {
+					font-size: 35px;
+				}
+			}
+			.skill {
+				width: 100%;
+				.skillWheel {
+					width: 80%;
+					padding: 10px 30px;
+					flex-wrap: nowrap;
+					align-items: center;
+					.toggleSkills {
+						flex-direction: column;
+						align-items: normal;
+						.skillBtn {
+							font-size: 20px;
+							min-width: 45%;
+						}
+					}
+					.skillDisplay {
+						align-items: center;
+						.initialQuote h3 {
+							font-size: 20px;
+						}
+						.skillNames img {
+							width: 72px;
+							height: 72px;
+						}
 					}
 				}
 			}

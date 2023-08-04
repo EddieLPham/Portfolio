@@ -32,7 +32,7 @@ const About = () => {
 							<span class="text">Front-end</span>
 						</button>
 						<button className="skillBtn" onClick={() => toggleDiv("div2")}>
-							<span class="text">Tools</span>
+							<span class="text">  Tools  </span>
 						</button>
 						<button className="skillBtn" onClick={() => toggleDiv("div3")}>
 							<span class="text">Back-end</span>
@@ -40,7 +40,7 @@ const About = () => {
 					</div>
 					<div className="skillDisplay">
 						{!visibleDiv && (
-							<div className="my-div">
+							<div className="initialQuote">
 								<h3>
 									"One can have no smaller or greater mastery than mastery of
 									oneself." - Leonardo da Vinci
@@ -49,7 +49,6 @@ const About = () => {
 						)}
 						{visibleDiv === "div1" && (
 							<div className="skillNames">
-								<h2>Front-End</h2>
 								<img
 									width="90"
 									height="90"
@@ -73,7 +72,6 @@ const About = () => {
 						)}
 						{visibleDiv === "div2" && (
 							<div className="skillNames">
-								<h2>Tools</h2>
 								<img
 									width="90"
 									height="90"
@@ -102,7 +100,6 @@ const About = () => {
 						)}
 						{visibleDiv === "div3" && (
 							<div className="skillNames">
-								<h2>Back-end</h2>
 								<img
 									width="90"
 									height="90"

@@ -38,7 +38,12 @@ const Contact = () => {
 				<div className="contactForm">
 					<div className="emailHeader">
 						<h2>Send me a message! </h2>
-						<box-icon name="mail-send" size="lg"></box-icon>
+						<img
+							width="48"
+							height="48"
+							src="https://img.icons8.com/material-outlined/48/mail.png"
+							alt="mail"
+						/>
 					</div>
 					<form className="emailForm" ref={form} onSubmit={sendEmail}>
 						<input
