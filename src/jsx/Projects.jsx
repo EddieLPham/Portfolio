@@ -9,7 +9,8 @@ const Projects = () => {
 					<h3 className="boxTitle">
 						<a
 							href="https://github.com/SuggestedName/Movie-Screening-Forum"
-							target="_blank"
+							target="blank"
+							rel="noreferrer"
 						>
 							Movie Screening Forum
 						</a>
@@ -27,6 +28,7 @@ const Projects = () => {
 						<a
 							href="https://github.com/SuggestedName/CNN-Dolphins/"
 							target="_blank"
+							rel="noreferrer"
 						>
 							Dolphin Identifier MachineLearning Project
 						</a>
@@ -48,6 +50,7 @@ const Projects = () => {
 						<a
 							href="https://github.com/SuggestedName/CSCI6050-B1/"
 							target="_blank"
+							rel="noreferrer"
 						>
 							Movie Theater Booking
 						</a>

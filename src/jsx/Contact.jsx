@@ -32,19 +32,18 @@ const Contact = () => {
 					Tell me about you and your projects.
 				</h1>
 				<h3>Let create something together!</h3>
-			</div>{" "}
-			{/*message*/}
+			</div>
 			<div className="contactEmail">
+				<div className="emailHeader">
+					<h2>Send me a message! </h2>
+					<img
+						width="48"
+						height="48"
+						src="https://img.icons8.com/material-outlined/48/mail.png"
+						alt="mail"
+					/>
+				</div>
 				<div className="contactForm">
-					<div className="emailHeader">
-						<h2>Send me a message! </h2>
-						<img
-							width="48"
-							height="48"
-							src="https://img.icons8.com/material-outlined/48/mail.png"
-							alt="mail"
-						/>
-					</div>
 					<form className="emailForm" ref={form} onSubmit={sendEmail}>
 						<input
 							class="form-group section"

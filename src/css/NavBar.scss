@@ -1,13 +1,13 @@
 nav.NavContainer {
-	height: 20px;
-	padding: 1%;
+	height: 4rem;
+	padding: 1em;
 	position: -webkit-sticky;
 	position: sticky;
 	z-index: 5;
 	ul.Lists {
 		position: absolute;
 		display: flex;
-		right: 0;
+		right: 3.5rem;
 		margin: 0;
 		padding: 0;
 		li.Items {

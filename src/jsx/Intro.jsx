@@ -24,24 +24,33 @@ const Intro = () => {
 	}, [currentTitle]);
 
 	return (
-		<div id = "intro" className="IContainer">
+		<div id="intro" className="IContainer">
 			<div className="titleBox">
 				<h1 className="tag"> {titleIndex}</h1>
 			</div>
-
-			<div className="descBox">
-				<h4 className="descGreet">Hello there 👋! I'm Lap Pham,</h4>
-				<p className="desc">I'm a Software Developer.</p>
-				<div className="webLink">
-					<a href="#skill" className="Button">Skills</a>
-					<a href="#project" className="Button">Projects</a>
-					<a href="#about" className="Button">About</a>
-					<a href="#contact" className="Button">Contact</a>
+			<div className="introBox">
+				<div className="i-left">
+					<div className="intro">
+						<h4 className="greet">Hello there 👋! I'm Lap Pham,</h4>
+						<p className="greetDesc">I'm a Software Developer.</p>
+					</div>
+					<div className="webLink">
+						<a href="#skill" className="Button">
+							Skills
+						</a>
+						<a href="#project" className="Button">
+							Projects
+						</a>
+						<a href="#about" className="Button">
+							About
+						</a>
+						<a href="#contact" className="Button">
+							Contact
+						</a>
+					</div>
 				</div>
-			</div>
 
-			<div className="image">
-					"Insert Picture of Me"
+				<div className="i-right">"Insert Picture of Me"</div>
 			</div>
 		</div> //Container
 	);

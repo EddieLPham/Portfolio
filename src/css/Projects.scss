@@ -1,113 +1,96 @@
-div.PContainer {
-	display: block;
-	padding: 5px;
-	margin: 5px;
-	height: 70vh;
-	h1.PTitle {
-		display: flex;
-		justify-content: center;
-		font-size: 50px;
-		margin: 0;
-		padding: 5px 0px;
+.PContainer {
+	margin: 5em 0;
+	.PTitle {
+		text-align: center;
+		font-size: 3.2em;
+		font-weight: 700;
+		margin: 0.5em 0;
 	}
-	div.PBox {
+	.PBox {
+		font-size: 1.3em;
 		display: flex;
-		div.ProjectBox {
-			outline: 2px solid;
-			border-radius: 10px;
-			margin: 10px;
-			height: 100%;
-			h3.boxTitle {
-				padding: 0 15px;
-				margin: 5px 0px;
+		.ProjectBox {
+			margin: 0.5em 0.2em;
+			padding: 0 0.2em;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+				rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+			border: 1px solid;
+			border-radius: 20px;
+			.boxTitle {
+				margin: 0.4em 0.2em;
 				a {
-					box-shadow: inset 0 0 0 0 #221d23;
-					color: #221d23;
-					margin-right: 10px;
-					padding-right: 2px;
-					transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-					&:hover {
-						color: #fff;
-						box-shadow: inset 900px 0 0 0 #221d23;
-					}
-				}
-
-				a {
-					color: #4f3824;
-					font-size: 30px;
-					font-weight: 700;
-					line-height: 1.5;
+					color: #92140c;
+					position: relative;
+					padding-bottom: 2px;
 					text-decoration: none;
+					&:after {
+						content: "";
+						height: 2px;
+						background: #92140c;
+						width: 0;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+					&:hover {
+						&:after {
+							width: 100%;
+							animation: bordergrow 0.7s 1;
+						}
+					}
 				}
 			}
-			div.boxDescription {
+			.boxDescription {
 				display: flex;
-				flex-direction: column;
-				background-color: #fa8072;
-				border-radius: 5px;
+				flex-wrap: wrap;
+				align-content: space-between;
+				padding: 0.5em;
+				margin: 0.4em 0;
+				border-radius: 15px;
+				height: 11em;
+				background-image: linear-gradient(to bottom, #FA8072,#999AC6);
+				color: #FEFEFA;
 				.p1 {
-					font-size: 20px;
-					padding: 0 10px 0 5px;
-					border-radius: 20px;
-					color: #000000;
-				}
-				h4 {
-					padding: 0 5px;
+					padding-bottom: 0.3em;
 				}
 			}
 		}
 	}
-	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-		&.PContainer {
-			height: 115vh;
-			.PTitle {
-				font-size: 25px;
-			}
-			.PBox {
-				flex-direction: column;
-				.ProjectBox {
-					h3.boxTitle {
-						a {
-							font-size: 17px;
-						}
-					}
-					.boxDescription {
-						.p1 {
-							font-size: 13px;
-						}
-						h4 {
-							font-size: 13px;
-						}
-					}
-				}
-			}
+}
+@media screen and (max-width: 480px) {
+	.PContainer {
+		.PBox {
+			font-size: 0.9em;
+			display: flex;
+			flex-direction: column;
 		}
 	}
-	
-	@media only screen and (min-device-width: 480px) and (max-device-width: 1056px) {
-		&.PContainer {
-			height: 100vh;
-			.PTitle {
-				font-size: 30px;
-			}
-			.PBox {
-				flex-direction: column;
-				.ProjectBox {
-					h3.boxTitle {
-						a {
-							font-size: 20px;
-						}
-					}
-					.boxDescription {
-						p.p1 {
-							font-size: 15px;
-						}
-						h4 {
-							font-size: 13px;
-						}
-					}
-				}
-			}
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+	.PContainer {
+		.PBox {
+			display: flex;
+			flex-direction: column;
 		}
+	}
+}
+@media screen and (min-width: 801px) and (max-width: 1380px) {
+	.PContainer {
+		.PBox {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+@keyframes bordergrow {
+	0% {
+		left: 50%;
+		width: 10%;
+	}
+
+	100% {
+		left: 0;
+		width: 100%;
 	}
 }
