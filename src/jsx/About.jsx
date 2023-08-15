@@ -10,6 +10,27 @@ const About = () => {
 	return (
 		<div id="about" className="AContainer">
 			<div className="portfolio">
+				<div className="aboutBox">
+					<div className="aboutMe">
+						<h1 className="aboutTitle">About Me</h1>
+						<p className="about">
+							Hi there! 👋 I'm Lap Pham, a Computer Science graduate from The
+							University of Georgia. I'm eager to explore new opportunities in
+							the tech industry.
+						</p>
+
+						<p className="about">
+							I'm excited to connect with tech enthusiasts, industry
+							professionals, and potential collaborators. Feel free to reach out
+							and let's discuss exciting opportunities and tech innovations!
+						</p>
+
+						<p className="about">
+							Down below are past projects that I've worked on, check them out
+							on GitHub simply click the title!
+						</p>
+					</div>
+				</div>
 				<div className="skillBox">
 					<div className="bgBox1"></div>
 					<div className="bgBox2"></div>
@@ -111,27 +132,6 @@ const About = () => {
 								</div>
 							)}
 						</div>
-					</div>
-				</div>
-				<div className="aboutBox">
-					<div className="aboutMe">
-						<h1 className="aboutTitle">About Me</h1>
-						<p className="about">
-							Hi there! 👋 I'm Lap Pham, a Computer Science graduate from The
-							University of Georgia. I'm eager to explore new opportunities in
-							the tech industry.
-						</p>
-
-						<p className="about">
-							I'm excited to connect with tech enthusiasts, industry
-							professionals, and potential collaborators. Feel free to reach out
-							and let's discuss exciting opportunities and tech innovations!
-						</p>
-
-						<p className="about">
-							Down below are past projects that I've worked on, check them out
-							on GitHub simply click the title!
-						</p>
 					</div>
 				</div>
 			</div>

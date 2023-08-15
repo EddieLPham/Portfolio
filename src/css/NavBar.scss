@@ -1,63 +1,26 @@
-nav.NavContainer {
-	height: 4rem;
-	padding: 1em;
-	position: -webkit-sticky;
-	position: sticky;
-	z-index: 5;
-	ul.Lists {
+.NavContainer {
+	height: 5em;
+	margin-bottom:1em;
+	.Lists {
 		position: absolute;
+		list-style-type: none;
+		right: 0;
 		display: flex;
-		right: 3.5rem;
-		margin: 0;
-		padding: 0;
-		li.Items {
-			list-style: none;
-			a {
-				position: relative;
-				display: block;
-				margin: 7px 1%;
-				padding: 5px 5px;
-				color: #262626;
-				transition: 0.5s;
-				z-index: 1;
-				img {
-					height: 50px;
-					width: 50px;
-				}
-				&:before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 90%;
-					border-top: 2px solid #262626;
-					border-bottom: 2px solid #262626;
-					transform: scaleY(2);
-					opacity: 0;
-					transition: 0.3s;
-				}
-				&:after {
-					content: "";
-					position: absolute;
-					top: 2px;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					transform: scale(0);
-					opacity: 0;
-					transition: 0.3s;
-					z-index: -1;
-				}
+		.listItems {
+			margin: 0 0.2em;
+			padding: 0.3em;
+			text-decoration: none;
+			img {
+				padding: 0.2em;
+				width: 50px;
+				height: 50px;
+				transition: 0.3s ease-in-out;
+				border-radius: 1em;
 				&:hover {
-					&:before {
-						transform: scaleY(1);
-						opacity: 1;
-					}
-					&:after {
-						transform: scaleY(1);
-						opacity: 1;
-					}
+					transform: scale(1.1);
+					border: 2px solid #92140c;
+					background-color: rgb(250, 128, 114,.3) ;
+
 				}
 			}
 		}

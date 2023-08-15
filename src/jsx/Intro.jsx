@@ -35,14 +35,11 @@ const Intro = () => {
 						<p className="greetDesc">I'm a Software Developer.</p>
 					</div>
 					<div className="webLink">
-						<a href="#skill" className="Button">
-							Skills
+						<a href="#about" className="Button">
+							About
 						</a>
 						<a href="#project" className="Button">
 							Projects
-						</a>
-						<a href="#about" className="Button">
-							About
 						</a>
 						<a href="#contact" className="Button">
 							Contact

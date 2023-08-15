@@ -17,58 +17,77 @@ const Contact = () => {
 			.then(
 				(result) => {
 					console.log(result.text);
+					displayAlert("Email sent successfully!", "success"); // Show success alert
 				},
 				(error) => {
 					console.log(error.text);
+					displayAlert("An error occurred. Please try again.", "error"); // Show error alert
 				}
 			);
 	};
+	const displayAlert = (message, type) => {
+		const alertElement = document.createElement("div");
+		alertElement.classList.add("alert", type);
+		alertElement.textContent = message;
 
+		document.body.appendChild(alertElement);
+
+		// Remove the alert after a certain duration (e.g., 3 seconds)
+		setTimeout(() => {
+			alertElement.remove();
+		}, 3000);
+	};
 	return (
 		<div id="contact" className="CContainer">
-			<div className="contactMessage">
-				<h1 className="contactTitle">
-					🔌 Let's connect! <br />
-					Tell me about you and your projects.
-				</h1>
-				<h3>Let create something together!</h3>
-			</div>
-			<div className="contactEmail">
-				<div className="emailHeader">
-					<h2>Send me a message! </h2>
-					<img
-						width="48"
-						height="48"
-						src="https://img.icons8.com/material-outlined/48/mail.png"
-						alt="mail"
-					/>
+			<div className="contact">
+				<div className="contactMessage">
+					<h1 className="contactTitle">
+						🔌 Let's connect! <br />
+						Tell me about you and your projects.
+					</h1>
+					<h3>Let's collaborate!</h3>
 				</div>
-				<div className="contactForm">
-					<form className="emailForm" ref={form} onSubmit={sendEmail}>
-						<input
-							class="form-group section"
-							type="text"
-							name="user_name"
-							placeholder="Your name... "
+				<div className="contactEmail">
+					<div className="emailHeader">
+						<h2>Send me a message! </h2>
+						<img
+							width="48"
+							height="48"
+							src="https://img.icons8.com/material-outlined/48/mail.png"
+							alt="mail"
 						/>
-						<input
-							class="form-group section "
-							type="email"
-							name="user_email"
-							placeholder="Your email... "
-						/>
-						<textarea
-							class="form-group message"
-							name="message"
-							row="4"
-							placeholder="Your message here!... "
-						/>
-						<button class="Button" type="submit" value="Send">
-							Send message
-						</button>
-					</form>
+					</div>
+					<div className="contactForm">
+						<form className="emailForm" ref={form} onSubmit={sendEmail}>
+							<input
+								className="form-group section"
+								type="text"
+								required
+								name="user_name"
+								placeholder="Your name... "
+							/>
+							<input
+								className="form-group section "
+								type="email"
+								required
+								name="user_email"
+								placeholder="Your email... "
+								pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+								title="Please enter a valid email address"
+							/>
+							<textarea
+								className="form-group message"
+								required
+								name="message"
+								row="4"
+								placeholder="Your message here!... "
+							/>
+							<button className="Button" type="submit" value="Send">
+								Send message
+							</button>
+						</form>
+					</div>
 				</div>
-				{/* email form*/}
 			</div>
 		</div> //Container
 	);

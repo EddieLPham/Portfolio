@@ -6,10 +6,11 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin: 3em;
+			margin: 3em 1em;
+			padding: 1em;
 			.bgBox1 {
 				position: absolute;
-				width: 45rem;
+				width: 43rem;
 				height: 30rem;
 				border-radius: 2em;
 				transform: rotate(5deg);
@@ -17,7 +18,7 @@
 			}
 			.bgBox2 {
 				position: absolute;
-				width: 45rem;
+				width: 43rem;
 				height: 30rem;
 				opacity: 0.8;
 				border-radius: 2em;
@@ -141,7 +142,7 @@
 			margin: 0 0.7rem;
 			padding: 0.4em 0.7rem;
 			.aboutMe {
-				font-size: 1.7em;
+				font-size: 1.5em;
 				.aboutTitle {
 					margin: 0;
 					text-align: center;
@@ -186,8 +187,10 @@
 				}
 			}
 			.aboutBox {
+				margin: 0 0.4rem;
+				padding: 0.4em 0.3rem;
 				.aboutMe {
-					font-size: 1em;
+					font-size: 1.2em;
 				}
 			}
 		}
@@ -208,7 +211,7 @@
 				.skillWheel {
 					.toggleSkill {
 						.skillBtn {
-							font-size: 0.85em;
+							font-size: 0.5em;
 						}
 					}
 					.skillDisplay {
