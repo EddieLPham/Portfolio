@@ -1,4 +1,5 @@
 .AContainer {
+	margin: 0 5em;
 	.portfolio {
 		display: flex;
 		.skillBox {
@@ -10,16 +11,16 @@
 			padding: 1em;
 			.bgBox1 {
 				position: absolute;
-				width: 43rem;
-				height: 30rem;
+				width: 40rem;
+				height: 24rem;
 				border-radius: 2em;
-				transform: rotate(5deg);
-				background-color: #343434;
+				transform: rotate(3deg);
+				background-color: #999ac6;
 			}
 			.bgBox2 {
 				position: absolute;
-				width: 43rem;
-				height: 30rem;
+				width: 40rem;
+				height: 24rem;
 				opacity: 0.8;
 				border-radius: 2em;
 				background-color: #fa8072;
@@ -121,11 +122,12 @@
 				.skillDisplay {
 					display: flex;
 					height: 7em;
-					font-size: 1.5em;
+					font-size: 1.3em;
 					padding: 1.2em;
 					justify-content: center;
 					align-items: center;
 					.initialQuote {
+						width: 90%;
 						h3 {
 							margin: 0 2em;
 							padding: 0 1em;
@@ -135,7 +137,6 @@
 				}
 			}
 		}
-
 		.aboutBox {
 			flex: 1;
 			z-index: 5;
@@ -153,17 +154,20 @@
 			}
 		}
 	}
-	@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 480px) {
+	.AContainer {
+		margin: 0;
 		.portfolio {
 			flex-direction: column-reverse;
 			.skillBox {
 				.bgBox1 {
 					width: 23rem;
-					height: 17rem;
+					height: 16rem;
 				}
 				.bgBox2 {
 					width: 23rem;
-					height: 17rem;
+					height: 16rem;
 				}
 				.skillWheel {
 					.toggleSkill {
@@ -175,7 +179,7 @@
 					.skillDisplay {
 						padding: 0.2em;
 						.initialQuote {
-							font-size: 0.6em;
+							font-size: 0.8em;
 						}
 						.skillNames {
 							img {
@@ -186,32 +190,35 @@
 					}
 				}
 			}
-			.aboutBox {
-				margin: 0 0.4rem;
-				padding: 0.4em 0.3rem;
-				.aboutMe {
-					font-size: 1.2em;
-				}
+		}
+		.aboutBox {
+			margin: 0 0.4rem;
+			padding: 0.4em 0.3rem;
+			.aboutMe {
+				font-size: 10vh;
 			}
 		}
 	}
+}
 
-	@media screen and (min-width: 481px) and (max-width: 800px) {
+@media screen and (min-width: 481px) and (max-width: 800px) {
+	.AContainer {
+		margin: 0;
 		.portfolio {
 			flex-direction: column-reverse;
 			.skillBox {
 				.bgBox1 {
-					width: 45rem;
+					width: 35rem;
 					height: 23rem;
 				}
 				.bgBox2 {
-					width: 45rem;
+					width: 35rem;
 					height: 23rem;
 				}
 				.skillWheel {
 					.toggleSkill {
 						.skillBtn {
-							font-size: 0.5em;
+							font-size: 0.9em;
 						}
 					}
 					.skillDisplay {
@@ -228,7 +235,10 @@
 			}
 		}
 	}
-	@media screen and (min-width: 801px) and (max-width: 1380px) {
+}
+@media screen and (min-width: 801px) and (max-width: 1380px) {
+	.AContainer {
+		margin: 0;
 		.portfolio {
 			flex-direction: column-reverse;
 			.skillBox {
@@ -243,12 +253,12 @@
 				.skillWheel {
 					.toggleSkill {
 						.skillBtn {
-							font-size: 0.8em;
+							font-size: 0.9em;
 						}
 					}
 					.skillDisplay {
 						.initialQuote {
-							font-size: 0.9em;
+							font-size: 1em;
 						}
 					}
 				}

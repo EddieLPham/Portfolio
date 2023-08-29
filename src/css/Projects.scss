@@ -1,5 +1,5 @@
 .PContainer {
-	margin: 5em 0;
+	margin: 5em 7.5em;
 	.PTitle {
 		text-align: center;
 		font-size: 3.2em;
@@ -16,6 +16,7 @@
 				rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 			border: 1px solid;
 			border-radius: 20px;
+			background-color: #fefefa;
 			.boxTitle {
 				margin: 0.4em 0.2em;
 				a {
@@ -48,8 +49,8 @@
 				margin: 0.4em 0;
 				border-radius: 15px;
 				height: 11em;
-				background-image: linear-gradient(to bottom, #FA8072,#999AC6);
-				color: #FEFEFA;
+				background-image: linear-gradient(to bottom, #fa8072, #999ac6);
+				color: #fefefa;
 				.p1 {
 					padding-bottom: 0.3em;
 				}
@@ -59,8 +60,9 @@
 }
 @media screen and (max-width: 480px) {
 	.PContainer {
+		margin: 5em 0;
 		.PBox {
-			font-size: 0.9em;
+			font-size: 1em;
 			display: flex;
 			flex-direction: column;
 		}
@@ -69,6 +71,7 @@
 
 @media screen and (min-width: 481px) and (max-width: 800px) {
 	.PContainer {
+		margin: 5em 0;
 		.PBox {
 			display: flex;
 			flex-direction: column;
@@ -77,6 +80,7 @@
 }
 @media screen and (min-width: 801px) and (max-width: 1380px) {
 	.PContainer {
+		margin: 5em 0;
 		.PBox {
 			display: flex;
 			flex-direction: column;

@@ -46,7 +46,6 @@ const Intro = () => {
 						</a>
 					</div>
 				</div>
-
 				<div className="i-right">"Insert Picture of Me"</div>
 			</div>
 		</div> //Container

@@ -1,26 +1,32 @@
 .NavContainer {
 	height: 5em;
-	margin-bottom:1em;
+	margin-bottom: 1em;
 	.Lists {
 		position: absolute;
 		list-style-type: none;
 		right: 0;
 		display: flex;
+
 		.listItems {
 			margin: 0 0.2em;
 			padding: 0.3em;
 			text-decoration: none;
+			position: relative;
 			img {
+				background-color: #ffffff;
 				padding: 0.2em;
 				width: 50px;
 				height: 50px;
-				transition: 0.3s ease-in-out;
-				border-radius: 1em;
-				&:hover {
-					transform: scale(1.1);
-					border: 2px solid #92140c;
-					background-color: rgb(250, 128, 114,.3) ;
+				transition: 0.2s ease-in-out;
+				border-radius: 0.5em;
+				a {
+					color: inherit;
+				}
 
+				&:hover {
+					transform: translateY(3px);
+					border: 2px solid #faf0be;
+					background-color: #92140c;
 				}
 			}
 		}

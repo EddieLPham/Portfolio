@@ -14,7 +14,7 @@ const About = () => {
 					<div className="aboutMe">
 						<h1 className="aboutTitle">About Me</h1>
 						<p className="about">
-							Hi there! 👋 I'm Lap Pham, a Computer Science graduate from The
+							As a Computer Science graduate from The
 							University of Georgia. I'm eager to explore new opportunities in
 							the tech industry.
 						</p>
