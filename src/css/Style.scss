@@ -2,6 +2,11 @@ body {
 	font-family: "PT Sans", sans-serif;
 	margin: 0;
 }
+body::-webkit-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+	display: none;
+}
 
 h1,
 h2,
@@ -24,9 +29,9 @@ a:active {
 html {
 	scroll-behavior: smooth;
 	background: radial-gradient(
-    ellipse farthest-corner at 95% 95%,
-    #999ac6,
-    #fa8072 30%,
-    #f3eed9
-  );
+		ellipse farthest-corner at 95% 95%,
+		#999ac6,
+		#fa8072 30%,
+		#f3eed9
+	);
 }

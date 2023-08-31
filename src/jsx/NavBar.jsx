@@ -7,8 +7,8 @@ const NavBar = () => {
 			<ul className="Lists">
 				<a
 					className="listItems"
-					href="../extras/LapPham-Resume.pdf"
-					target="_blank"
+					href="https://github.com/SuggestedName/WebsitePortfolio/blob/master/src/extras/LapPham-Resume.pdf"
+					target="blank"
 				>
 					<img
 						alt="resume"
