@@ -27,7 +27,7 @@ const About = () => {
 
 						<p className="about">
 							Down below are past projects that I've worked on, check them out
-							on GitHub simply click the title!
+							on GitHub by simply click the title!
 						</p>
 					</div>
 				</div>

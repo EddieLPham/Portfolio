@@ -22,7 +22,7 @@ const NavBar = () => {
 					target="_blank"
 				>
 					<img
-						classname="w-icon"
+						className="w-icon"
 						src="https://img.icons8.com/ios-filled/150/000000/linkedin.png"
 						alt="linkedin icon"
 					/>
@@ -34,7 +34,7 @@ const NavBar = () => {
 					target="_blank"
 				>
 					<img
-						classname="w-icon"
+						className="w-icon"
 						src="https://img.icons8.com/ios-filled/150/000000/github.png"
 						alt="github icon"
 					/>

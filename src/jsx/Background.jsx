@@ -1,13 +1,16 @@
-import React from "react";
-import "../css/Style.scss"
-function Background() {
+import React, { useState, useEffect } from "react";
+import "../css/Style.scss"; // You'll create this CSS file for styling
+
+const Background = () => {
 	return (
-		<div>
-			<div id="stars"></div>
-			<div id="stars2"></div>
-			<div id="stars3"></div>
+		<div className="container">
+			<div className="stars">
+				{Array.from({ length: 100 }, (_, index) => (
+					<div className="star" key={index}></div>
+				))}
+			</div>
 		</div>
 	);
-}
+};
 
 export default Background;

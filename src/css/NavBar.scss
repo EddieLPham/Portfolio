@@ -6,15 +6,18 @@
 		list-style-type: none;
 		right: 0;
 		display: flex;
-
+		padding: 0;
+		width: 13em;
+		justify-content: space-around;
 		.listItems {
 			margin: 0 0.2em;
 			padding: 0.3em;
+			width: 3.5em;
+			height: 3.5em;
 			text-decoration: none;
 			position: relative;
 			img {
-				background-color: #ffffff;
-				padding: 0.2em;
+				padding: 0.15em;
 				width: 50px;
 				height: 50px;
 				transition: 0.2s ease-in-out;
@@ -22,11 +25,11 @@
 				a {
 					color: inherit;
 				}
-
 				&:hover {
-					transform: translateY(3px);
-					border: 2px solid #faf0be;
-					background-color: #92140c;
+					transform: translateY(2px);
+					border: 2px solid #92140c;
+					box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+						rgba(0, 0, 0, 0.22) 0px 10px 10px;
 				}
 			}
 		}

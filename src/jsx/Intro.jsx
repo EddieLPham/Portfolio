@@ -1,27 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../css/Intro.scss";
 
 const Intro = () => {
-	const titles = [
-		"Designer",
-		"Software Developer",
-		"Back-end Developer",
-		"Web Developer",
-	];
-	const [titleIndex, setTitleIndex] = useState("Developer");
-	const [currentTitle, setCurrentTitle] = useState(0);
+	const titles = ["Software Developer", "Back-end Developer", "Web Developer"];
+	const intervalTime = 4000;
+
+	const [titleIndex, setTitleIndex] = useState("");
+	const currentTitleIndexRef = useRef(-1); // Start with -1 to skip the first title
 
 	useEffect(() => {
-		function updateTitle() {
-			setTitleIndex(titles[currentTitle]);
-			if (currentTitle < 3) {
-				setCurrentTitle(currentTitle + 1);
-			} else {
-				setCurrentTitle(0);
-			}
-		}
-		setTimeout(updateTitle, 4000);
-	}, [currentTitle]);
+		const updateTitle = () => {
+			currentTitleIndexRef.current =
+				(currentTitleIndexRef.current + 1) % titles.length;
+			setTitleIndex(titles[currentTitleIndexRef.current]);
+		};
+
+		// Increment the index once before starting the interval
+		currentTitleIndexRef.current =
+			(currentTitleIndexRef.current + 1) % titles.length;
+		setTitleIndex(titles[currentTitleIndexRef.current]);
+
+		const intervalId = setInterval(updateTitle, intervalTime);
+
+		return () => {
+			clearInterval(intervalId);
+		};
+	}, []);
 
 	return (
 		<div id="intro" className="IContainer">
