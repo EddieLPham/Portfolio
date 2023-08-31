@@ -7,7 +7,7 @@ const NavBar = () => {
 			<ul className="Lists">
 				<a
 					className="listItems"
-					href="..\extras\LapPham-Resume.pdf"
+					href="../extras/LapPham-Resume.pdf"
 					target="_blank"
 				>
 					<img
