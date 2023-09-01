@@ -28,10 +28,6 @@ a:active {
 
 html {
 	scroll-behavior: smooth;
-	background: radial-gradient(
-		ellipse farthest-corner at 95% 95%,
-		#999ac6,
-		#fa8072 30%,
-		#f3eed9
-	);
+	background: radial-gradient(farthest-corner, #999ac6, #fa8072 30%, #f3eed9)
+		top left / 200% 200%;
 }
