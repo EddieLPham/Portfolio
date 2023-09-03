@@ -11,16 +11,16 @@
 			padding: 1em;
 			.bgBox1 {
 				position: absolute;
-				width: 40rem;
-				height: 24rem;
+				width: 38rem;
+				height: 27rem;
 				border-radius: 2em;
 				transform: rotate(3deg);
 				background-color: #999ac6;
 			}
 			.bgBox2 {
 				position: absolute;
-				width: 40rem;
-				height: 24rem;
+				width: 38rem;
+				height: 27rem;
 				opacity: 0.8;
 				border-radius: 2em;
 				background-color: #fa8072;
@@ -122,10 +122,10 @@
 					justify-content: center;
 					align-items: center;
 					.initialQuote {
-						width: 90%;
+						width: 80%;
 						h3 {
-							margin: 0 2em;
-							padding: 0 1em;
+							margin: 0 1em;
+							padding: 0 0.7em;
 							text-align: center;
 						}
 					}
@@ -181,7 +181,7 @@
 					.skillDisplay {
 						padding: 0.2em;
 						.initialQuote {
-							font-size: 0.8em;
+							font-size: 0.7em;
 						}
 						.skillNames {
 							img {
@@ -245,11 +245,11 @@
 			flex-direction: column-reverse;
 			.skillBox {
 				.bgBox1 {
-					width: 50rem;
+					width: 40rem;
 					height: 23rem;
 				}
 				.bgBox2 {
-					width: 50rem;
+					width: 40rem;
 					height: 23rem;
 				}
 				.skillWheel {
