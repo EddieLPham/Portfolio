@@ -1,99 +1,112 @@
 div.IContainer {
-	display: block;
-	.titleBox {
-		width: 100%;
-		margin: 1em 0;
-		.tag {
-			font-size: 4em;
-			text-align: center;
-			animation: blink 4s infinite;
-			@keyframes blink {
-				0% {
-					opacity: 0;
-				}
+    padding: 7rem 1em;
+    margin: 2rem 0 12rem;
 
-				50% {
-					opacity: 1;
-				}
+    .titleBox {
+        width: 100%;
+        margin: 1em 0;
 
-				100% {
-					opacity: 0;
-				}
-			}
-		}
-	}
-	.introBox {
-		display: flex;
-		align-items: center;
+        .tag {
+            font-size: 4em;
+            text-align: center;
+            animation: blink 4s infinite;
 
-		.i-left {
-			flex: 1;
-			text-align: right;
-			font-size: 2.7em;
-			.intro {
-				.greet {
-					padding: 0;
-					margin: 0;
-				}
-				.greetDesc {
-					padding: 0;
-					margin: 0;
-				}
-			}
-			.webLink {
-				font-weight: 700;
-				.Button {
-					text-decoration: none;
-					border-radius: 10px;
-					background:transparent;
-					box-shadow: inset 0 0 0 0 #92140c;
-					color: #92140c;
-					margin: 0 0.1em;
-					padding: 0.1em;
-					transition: color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
-					
-					&:hover {
-						color: #f3eed9;
-						box-shadow: inset 4em 0 0 0 #92140c;
-					}
-				}
-			}
-			/* For Mobile */
-		}
-		.i-right {
-			flex: 1;
-			height: 35rem;
-			margin: 10px;
-			
-			
+            @keyframes blink {
+                0% {
+                    opacity: 0;
+                }
 
-		}
-	}
-	@media screen and (min-width: 481px) and (max-width: 850px) {
-		.titleBox {
-			.tag {
-				font-size: 3em;
-			}
-		}
-		.introBox {
-			flex-direction: column;
-			.i-left {
-				font-size: 2.5em;
-			}
-		}
-	}
-	@media screen and (max-width: 480px) {
-		.titleBox {
-			.tag {
-				font-size: 2em;
-			}
-		}
-		.introBox {
-			flex-direction: column;
-			.i-left {
-				font-size: 1.7em;
-			}
-		}
-	}
+                50% {
+                    opacity: 1;
+                }
 
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            justify-items: center;
+        }
+    }
+
+    .introBox {
+        .i-left {
+            font-size: 2.7em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .intro {
+                .greet {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .greetDesc {
+                    .colorTitle {
+                        color: #fa8072;
+                    }
+
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .webLink {
+                font-weight: 700;
+
+                .Button {
+                    text-decoration: none;
+                    border-radius: 10px;
+                    background: transparent;
+                    box-shadow: inset 0 0 0 0 #92140c;
+                    color: #92140c;
+                    margin: 0 1em;
+                    padding: 0.1em;
+                    transition:
+                        color 0.2s ease-in-out,
+                        box-shadow 0.4s ease-in-out;
+
+                    &:hover {
+                        color: #f3eed9;
+                        box-shadow: inset 4em 0 0 0 #92140c;
+                    }
+                }
+            }
+
+            /* For Mobile */
+        }
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 850px) {
+        .titleBox {
+            .tag {
+                font-size: 3em;
+            }
+        }
+
+        .introBox {
+            flex-direction: column;
+
+            .i-left {
+                font-size: 2.5em;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .titleBox {
+            .tag {
+                font-size: 2em;
+            }
+        }
+
+        .introBox {
+            flex-direction: column;
+
+            .i-left {
+                font-size: 1.7em;
+            }
+        }
+    }
 }

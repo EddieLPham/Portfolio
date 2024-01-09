@@ -1,275 +1,163 @@
 .AContainer {
-	margin: 0 5em;
-	.portfolio {
-		display: flex;
-		.skillBox {
-			flex: 1;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 3em 1em;
-			padding: 1em;
-			.bgBox1 {
-				position: absolute;
-				width: 38rem;
-				height: 27rem;
-				border-radius: 2em;
-				transform: rotate(3deg);
-				background-color: #999ac6;
-			}
-			.bgBox2 {
-				position: absolute;
-				width: 38rem;
-				height: 27rem;
-				opacity: 0.8;
-				border-radius: 2em;
-				background-color: #fa8072;
-			}
-			.skillWheel {
-				z-index: 5;
-				.toggleSkill {
-					display: flex;
-					justify-content: center;
-					margin-bottom: 1em;
-					@mixin skillBtn-border-drawing(
-						$color: #fefefa,
-						$hover: black,
-						$width: 2em,
-						$vertical: top,
-						$horizontal: left,
-						$duration: 0.25s
-					) {
-						box-shadow: inset 0 0 0 $width $color;
-						color: $color;
-						transition: color $duration cal($duration / 3);
-						position: relative;
-						&::before,
-						&::after {
-							border: 0 solid transparent;
-							box-sizing: border-box;
-							content: "";
-							pointer-events: none;
-							position: absolute;
-							width: 0;
-							height: 0;
+    padding: 4rem 0;
+    margin: 5rem 0;
 
-							#{$vertical}: 0;
-							#{$horizontal}: 0;
-						}
-						&::before {
-							$h-side: if($horizontal == "left", "right", "left");
+    .portfolio {
+        margin: 3rem 0;
 
-							border-#{$vertical}-width: $width;
-							border-#{$h-side}-width: $width;
-						}
-						&::after {
-							$v-side: if($vertical == "top", "bottom", "top");
+        .skillBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4rem 1rem;
 
-							border-#{$v-side}-width: $width;
-							border-#{$horizontal}-width: $width;
-						}
-						&:hover {
-							color: $hover;
+            .skillWheel {
+                z-index: 5;
+                border: 2px solid #ffffff;
+                margin: 1rem;
+                padding: 2rem;
 
-							&::before,
-							&::after {
-								border-color: $hover;
-								transition: border-color 0s, width $duration, height $duration;
-								width: 100%;
-								height: 100%;
-							}
-							&::before {
-								transition-delay: 0s, 0s, $duration;
-							}
+                .toggleSkill {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1em;
 
-							&::after {
-								transition-delay: 0s, $duration, 0s;
-							}
-						}
-					}
+                    @mixin skillBtn-border-drawing($color: #fefefa,
+                        $hover: black,
+                        $width: 2em,
+                        $vertical: top,
+                        $horizontal: left,
+                        $duration: 0.25s) {
+                        box-shadow: inset 0 0 0 $width $color;
+                        color: $color;
+                        transition: color $duration cal($duration / 3);
+                        position: relative;
 
-					.draw-border {
-						@include skillBtn-border-drawing(
-							#92140c,
-							#faf0be,
-							4px,
-							bottom,
-							right
-						);
-					}
-					//=== Button styling, semi-ignore
-					.skillBtn {
-						background: none;
-						border: none;
-						cursor: pointer;
-						line-height: 1.5;
-						padding: 1em 2em;
-						letter-spacing: 0.05rem;
-						margin: 0.5em;
-						font-size: 1.1em;
-						width: 9em;
+                        &::before,
+                        &::after {
+                            border: 0 solid transparent;
+                            box-sizing: border-box;
+                            content: "";
+                            pointer-events: none;
+                            position: absolute;
+                            width: 0;
+                            height: 0;
 
-						&:focus {
-							outline: 2px dotted #fa8072;
-						}
-					}
-				}
-				.skillDisplay {
-					display: flex;
-					height: 7em;
-					font-size: 1.3em;
-					padding: 1.2em;
-					justify-content: center;
-					align-items: center;
-					.initialQuote {
-						width: 80%;
-						h3 {
-							margin: 0 1em;
-							padding: 0 0.7em;
-							text-align: center;
-						}
-					}
-				}
-			}
-		}
-		.aboutBox {
-			flex: 1;
-			z-index: 5;
-			margin: 0 0.7rem;
-			padding: 0.4em 0.7rem;
-			border-radius: 30px;
+                            #{$vertical}: 0;
+                            #{$horizontal}: 0;
+                        }
 
-			box-shadow: rgba(250, 128, 114, 0.4) 0 0 0 2px,
-				rgba(250, 128, 114, 0.4) -5px 5px, rgba(250, 128, 114, 0.3) -10px 10px,
-				rgba(250, 128, 114, 0.2) -15px 15px, rgba(250, 128, 114, 0.1) -20px 20px,
-				rgba(250, 128, 114, 0.05) -25px 25px;
+                        &::before {
+                            $h-side: if($horizontal =="left", "right", "left");
 
-			.aboutMe {
-				font-size: 1.5em;
-				.aboutTitle {
-					margin: 0;
-					text-align: center;
-				}
-				.about {
-					margin: 0.5em;
-				}
-			}
-		}
-	}
-}
-@media screen and (max-width: 480px) {
-	.AContainer {
-		margin: 0;
-		.portfolio {
-			flex-direction: column-reverse;
-			.skillBox {
-				.bgBox1 {
-					width: 23rem;
-					height: 16rem;
-				}
-				.bgBox2 {
-					width: 23rem;
-					height: 16rem;
-				}
-				.skillWheel {
-					.toggleSkill {
-						margin-bottom: 0.2em;
-						.skillBtn {
-							font-size: 0.75em;
-						}
-					}
-					.skillDisplay {
-						padding: 0.2em;
-						.initialQuote {
-							font-size: 0.7em;
-						}
-						.skillNames {
-							img {
-								width: 72px;
-								height: 72px;
-							}
-						}
-					}
-				}
-			}
-		}
-		.aboutBox {
-			margin: 0 0.4rem;
-			padding: 0.4em 0.3rem;
-			.aboutMe {
-				font-size: 10vh;
-			}
-		}
-	}
-}
+                            border-#{$vertical}-width: $width;
+                            border-#{$h-side}-width: $width;
+                        }
 
-@media screen and (min-width: 481px) and (max-width: 800px) {
-	.AContainer {
-		margin: 0;
-		.portfolio {
-			flex-direction: column-reverse;
-			.skillBox {
-				.bgBox1 {
-					width: 35rem;
-					height: 23rem;
-				}
-				.bgBox2 {
-					width: 35rem;
-					height: 23rem;
-				}
-				.skillWheel {
-					.toggleSkill {
-						.skillBtn {
-							font-size: 0.9em;
-						}
-					}
-					.skillDisplay {
-						.initialQuote {
-							font-size: 1em;
-						}
-					}
-				}
-			}
-			.aboutBox {
-				.aboutMe {
-					font-size: 1.5em;
-				}
-			}
-		}
-	}
-}
-@media screen and (min-width: 801px) and (max-width: 1380px) {
-	.AContainer {
-		margin: 0;
-		.portfolio {
-			flex-direction: column-reverse;
-			.skillBox {
-				.bgBox1 {
-					width: 40rem;
-					height: 23rem;
-				}
-				.bgBox2 {
-					width: 40rem;
-					height: 23rem;
-				}
-				.skillWheel {
-					.toggleSkill {
-						.skillBtn {
-							font-size: 0.9em;
-						}
-					}
-					.skillDisplay {
-						.initialQuote {
-							font-size: 1em;
-						}
-					}
-				}
-			}
-			.aboutBox {
-				.aboutMe {
-					font-size: 1.5em;
-				}
-			}
-		}
-	}
+                        &::after {
+                            $v-side: if($vertical =="top", "bottom", "top");
+
+                            border-#{$v-side}-width: $width;
+                            border-#{$horizontal}-width: $width;
+                        }
+
+                        &:hover {
+                            color: $hover;
+
+                            &::before,
+                            &::after {
+                                border-color: $hover;
+                                transition:
+                                    border-color 0s,
+                                    width $duration,
+                                    height $duration;
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            &::before {
+                                transition-delay: 0s, 0s, $duration;
+                            }
+
+                            &::after {
+                                transition-delay: 0s, $duration, 0s;
+                            }
+                        }
+                    }
+
+                    .draw-border {
+                        @include skillBtn-border-drawing(#b5b5b5,
+                            #fa8072,
+                            4px,
+                            bottom,
+                            right);
+                    }
+
+                    //=== Button styling, semi-ignore
+                    .skillBtn {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        line-height: 1.5;
+                        padding: 1em 2em;
+                        letter-spacing: 0.05rem;
+                        margin: 0.5em;
+                        font-size: 1.1em;
+                        width: 9em;
+
+                        &:focus {
+                            outline: 2px dotted #fa8072;
+                        }
+                    }
+                }
+
+                .skillDisplay {
+                    display: flex;
+                    height: 7em;
+                    font-size: 1.4em;
+                    padding: 1.2em;
+                    justify-content: center;
+                    align-items: center;
+
+                    .initialQuote {
+                        width: 80%;
+
+                        h3 {
+                            margin: 0 1em;
+                            padding: 0 0.7em;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .aboutBox {
+            z-index: 5;
+            margin: 3rem 0;
+            padding: 0.4em 3rem;
+            border-radius: 30px;
+
+            box-shadow:
+                rgba(250, 128, 114, 0.4) 0 0 0 2px,
+                rgba(250, 128, 114, 0.4) -5px 5px,
+                rgba(250, 128, 114, 0.3) -10px 10px,
+                rgba(250, 128, 114, 0.2) -15px 15px,
+                rgba(250, 128, 114, 0.1) -20px 20px,
+                rgba(250, 128, 114, 0.05) -25px 25px;
+
+            .aboutMe {
+                font-size: 1.5em;
+
+                .aboutTitle {
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .about {
+                    margin: 0.5em;
+                }
+            }
+        }
+    }
 }

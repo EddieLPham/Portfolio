@@ -1,100 +1,67 @@
 .PContainer {
-	margin: 5em 7.5em;
-	.PTitle {
-		text-align: center;
-		font-size: 3.2em;
-		font-weight: 700;
-		margin: 0.5em 0;
-	}
-	.PBox {
-		font-size: 1.3em;
-		display: flex;
-		.ProjectBox {
-			margin: 0.5em 0.2em;
-			padding: 0 0.2em;
-			box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-				rgba(0, 0, 0, 0.23) 0px 6px 6px;
-			border: 1px solid;
-			border-radius: 20px;
-			background-color: #fefefa;
-			.boxTitle {
-				margin: 0.4em 0.2em;
-				a {
-					color: #92140c;
-					position: relative;
-					padding-bottom: 2px;
-					text-decoration: none;
-					&:after {
-						content: "";
-						height: 2px;
-						background: #92140c;
-						width: 0;
-						position: absolute;
-						bottom: 0;
-						left: 0;
-					}
-					&:hover {
-						&:after {
-							width: 100%;
-							animation: bordergrow 0.7s 1;
-						}
-					}
-				}
-			}
-			.boxDescription {
-				display: flex;
-				flex-wrap: wrap;
-				align-content: space-between;
-				padding: 0.5em;
-				margin: 0.4em 0;
-				border-radius: 15px;
-				height: 12em;
-				background-image: linear-gradient(to bottom, #fa8072, #999ac6);
-				color: #fefefa;
-				.p1 {
-					padding-bottom: 0.3em;
-				}
-			}
-		}
-	}
-}
-@media screen and (max-width: 480px) {
-	.PContainer {
-		margin: 5em 0;
-		.PBox {
-			font-size: 1em;
-			display: flex;
-			flex-direction: column;
-		}
-	}
+    padding: 3rem 0;
+    margin: 7rem 0;
+    font-size: 1.4em;
+
+    .PTitle {
+        text-align: center;
+        font-weight: 700;
+        margin: 0.5em 0;
+    }
+
+    .PBox {
+        .ProjectBox {
+            margin: 2em 0;
+
+            .boxTitle {
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                    color: #fa8072;
+                    position: relative;
+                    padding-bottom: 2px;
+                    text-decoration: none;
+
+                    &:after {
+                        content: "";
+                        height: 2px;
+                        background: #b5b5b5;
+                        width: 0;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                            animation: bordergrow 0.7s 1;
+                        }
+                    }
+                }
+            }
+
+            .boxDescription {
+                margin: 0.5em 0;
+
+                .description {
+                    padding: 0.3em 0.5em;
+                    margin: 0.5em 0;
+                }
+            }
+        }
+    }
 }
 
-@media screen and (min-width: 481px) and (max-width: 800px) {
-	.PContainer {
-		margin: 5em 0;
-		.PBox {
-			display: flex;
-			flex-direction: column;
-		}
-	}
-}
-@media screen and (min-width: 801px) and (max-width: 1380px) {
-	.PContainer {
-		margin: 5em 0;
-		.PBox {
-			display: flex;
-			flex-direction: column;
-		}
-	}
-}
 @keyframes bordergrow {
-	0% {
-		left: 50%;
-		width: 10%;
-	}
+    0% {
+        left: 50%;
+        width: 10%;
+    }
 
-	100% {
-		left: 0;
-		width: 100%;
-	}
+    100% {
+        left: 0;
+        width: 100%;
+    }
 }
