@@ -1,13 +1,13 @@
 div.IContainer {
-    padding: 7rem 1em;
-    margin: 2rem 0 12rem;
+    padding: 7rem 2rem;
+    margin: 2rem 0 10rem;
 
     .titleBox {
         width: 100%;
-        margin: 1em 0;
+        margin: 0 0 3em;
 
         .tag {
-            font-size: 4em;
+            font-size: 3rem;
             text-align: center;
             animation: blink 4s infinite;
 
@@ -77,11 +77,16 @@ div.IContainer {
             /* For Mobile */
         }
     }
+}
 
-    @media screen and (min-width: 481px) and (max-width: 850px) {
+@media screen and (max-width: 768px) {
+    div.IContainer {
+        margin: 2rem 1rem;
+        padding: 1rem 0 5rem;
+
         .titleBox {
             .tag {
-                font-size: 3em;
+                font-size: 3rem;
             }
         }
 
@@ -89,23 +94,7 @@ div.IContainer {
             flex-direction: column;
 
             .i-left {
-                font-size: 2.5em;
-            }
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .titleBox {
-            .tag {
-                font-size: 2em;
-            }
-        }
-
-        .introBox {
-            flex-direction: column;
-
-            .i-left {
-                font-size: 1.7em;
+                font-size: 2rem;
             }
         }
     }

@@ -4,23 +4,23 @@
 
     .portfolio {
         margin: 3rem 0;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
 
         .skillBox {
             display: flex;
             justify-content: center;
-            align-items: center;
-            margin: 4rem 1rem;
+            flex: 1;
 
             .skillWheel {
-                z-index: 5;
                 border: 2px solid #ffffff;
-                margin: 1rem;
-                padding: 2rem;
+                margin: 3.5rem;
+                padding: 4rem 2rem;
 
                 .toggleSkill {
                     display: flex;
                     justify-content: center;
-                    margin-bottom: 1em;
 
                     @mixin skillBtn-border-drawing($color: #fefefa,
                         $hover: black,
@@ -99,11 +99,11 @@
                         border: none;
                         cursor: pointer;
                         line-height: 1.5;
-                        padding: 1em 2em;
+                        padding: 1rem 2rem;
                         letter-spacing: 0.05rem;
-                        margin: 0.5em;
-                        font-size: 1.1em;
-                        width: 9em;
+                        margin: 1.5rem;
+                        font-size: 1.1rem;
+                        width: 10rem;
 
                         &:focus {
                             outline: 2px dotted #fa8072;
@@ -113,17 +113,16 @@
 
                 .skillDisplay {
                     display: flex;
-                    height: 7em;
-                    font-size: 1.4em;
-                    padding: 1.2em;
+                    height: 7rem;
+                    font-size: 1.4rem;
+                    padding: 2rem;
                     justify-content: center;
-                    align-items: center;
 
                     .initialQuote {
                         width: 80%;
 
                         h3 {
-                            margin: 0 1em;
+                            margin: 0 1rem;
                             padding: 0 0.7em;
                             text-align: center;
                         }
@@ -133,11 +132,11 @@
         }
 
         .aboutBox {
-            z-index: 5;
             margin: 3rem 0;
-            padding: 0.4em 3rem;
+            padding: 0.4rem 3rem;
+            flex: 1;
             border-radius: 30px;
-
+            width: 50%;
             box-shadow:
                 rgba(250, 128, 114, 0.4) 0 0 0 2px,
                 rgba(250, 128, 114, 0.4) -5px 5px,
@@ -147,17 +146,70 @@
                 rgba(250, 128, 114, 0.05) -25px 25px;
 
             .aboutMe {
-                font-size: 1.5em;
-
-                .aboutTitle {
-                    margin: 0;
-                    text-align: center;
-                }
+                font-size: 1.5rem;
 
                 .about {
-                    margin: 0.5em;
+                    margin: 0.5rem;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .AContainer {
+        padding: 1rem 0;
+        margin: 1rem 0;
+
+        .portfolio {
+            flex-direction: column;
+
+            .skillBox {
+                .skillWheel {
+
+                    .toggleSkill {
+                        flex-direction: column;
+                        font-size: 0;
+                        margin: 1rem;
+                        align-items: center;
+
+                        .skillBtn {
+                            padding: 1rem .5rem;
+                            margin: .75rem;
+                        }
+
+                    }
+
+                }
+            }
+
+            .aboutBox {
+                .aboutMe {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+    }
+
+
+    .skillDisplay {
+        margin: 2rem 0 3rem;
+
+        .skillNames {
+            img {
+                width: 65px;
+                height: 65px;
+                margin: .2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .AContainer {
+        .portfolio {
+            flex-direction: column;
         }
     }
 }

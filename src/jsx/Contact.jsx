@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div id="contact" className="CContainer">
       <div className="contacts">
-        <div>
+        <div className="cfield">
           <h2>Socials</h2>
           <a
             className="listItems"
@@ -23,11 +23,13 @@ const Contact = () => {
             <h3>Github</h3>
           </a>
         </div>
-        <div>
+        <div className="cfield">
           <h2>Contact</h2>
-          <h3>lpham1357@gmail.com</h3>
+          <a className="listItems" href="mailto:lpham1357@gmail.com">
+            <h3>lpham1357@gmail.com</h3>
+          </a>
         </div>
-        <div>
+        <div className="cfield">
           <h2>Info</h2>
           <h3>Based in: Atlanta</h3>
           <h3>Education: University of Georgia</h3>

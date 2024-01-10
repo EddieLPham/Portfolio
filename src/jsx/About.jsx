@@ -47,7 +47,7 @@ const About = () => {
               </button>
             </div>
             <div className="skillDisplay">
-              {!visibleDiv && <h3>Tools I have worked with!</h3>}
+              {!visibleDiv && <h3> Technologies I have worked with!!</h3>}
               {visibleDiv === "div1" && (
                 <div className="skillNames">
                   <img
