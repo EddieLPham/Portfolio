@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/NavBar.scss";
-// import Resume from "../extras/LapResume.html";
+import Resume from "../extras/LapPhamResume.pdf";
 
 const NavBar = () => {
   return (
@@ -28,6 +28,13 @@ const NavBar = () => {
             <img
               className="w-icon"
               src="https://img.icons8.com/ios-filled/150/000000/github.png"
+              alt="github icon"
+            />
+          </a>
+          <a className="listItems" href={Resume} target="_blank">
+            <img
+              className="w-icon"
+              src="https://img.icons8.com/ios-filled/150/000000/resume.png"
               alt="github icon"
             />
           </a>
